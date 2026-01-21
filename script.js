@@ -74,3 +74,4 @@ const buton = document.querySelector('buton1')
 container.addEventListener('click' , ()=>{console.log('div')})
 outerdiv.addEventListener('click' , ()=>{console.log('outer div')})
 buton.addEventListener('click' , ()=>{console.log('button')})
+ 
