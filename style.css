@@ -1,0 +1,76 @@
+
+/* .para{
+    font-size: 20px;
+    color: teal;
+    margin: 10px;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 10px;
+} */
+
+button:hover{
+    background-color: purple;
+    cursor: pointer;
+}
+
+button:active{
+    transform: scale(0.98);
+}
+
+body{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lightblue;
+}
+
+p.para:hover{
+    background-color: #e0e0e0;
+    cursor: pointer;
+}
+
+p.para:active{
+    transform: scale(0.98);
+}
+button{
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 30px;
+    border: none;
+    background-color: rgba(178, 197, 73, 0.856);
+    transition: background-color 0.3s ease;
+
+}
+
+form{
+    margin: 50px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    
+}
+
+.dark-theme{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lightgrey;
+}
+
+
+.toogle{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 10px 15px;
+    border-radius: 30px;
+    border: none;
+    background-color: rgba(178, 197, 73, 0.856);
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
