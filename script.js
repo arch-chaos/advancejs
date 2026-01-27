@@ -1,77 +1,78 @@
-// // objects
-// // let obj={
-// //     name:'Vishal',
-// //     address:'Delhi',
-// // }
-// // let obj1={
-// //     name:'Vishal',
-// //     age:'17'
-// // }
+// const para=document.querySelector("p")
+// para.innerText="Hello Shubham"
+// para.style.backgroundColor="Black"
+// para.style.color="White"
 
-// // const para=document.querySelector('.para')
-// // para.innerText='Hello World'
-// // para.style.color='blue'
-// // console.log(document)
+// Selecting elements by class name
 
-// // const para=document.getElementsByClassName('para')
-// // para[0].innerText='Hello World'
-// // para[1].style.color='blue'
-// // console.log(document)
+// const paras=document.getElementsByClassName("para")
+// paras[0].innerText="Hello!"
+// paras[0].innerHTML="<h1 style='color:red; background-color:Thistle;'>WOOWWWW</h1>"
+// paras[1].style.color='Blue'
+// Returns an array of elements if there are multiple.
 
-// // function handleClick(){
-// //     alert('Button Clicked')
-// // }
+// Selecting elements by id
 
-// // const btn=document.getElementById('btn')
-// // btn.style.backgroundColor='green'
-// // btn.style.color='white'
+// const para=document.getElementById("heading")
+// para.innerText="MAIN SHUBHAM HUN"
+// para.innerHTML="<p id='heading' style='color:Blue;background-color:Thistle;'>MAIN SHUBHAM HUN</p> " 
 
-// // const para=document.querySelectorAll('.para') ----> retruns nodelist
-// // para[0].innerText='Hello World'
-// // para[1].style.color='blue'
-// // console.log(document)
 
-// // const para=document.querySelector('.para') //--> returns first element
-// // para.innerText='Hello World'
-// // para.style.color='blue'
-// // console.log(document)
+// Returns a new array
+// let arr=[1, 2, 3, 4, 5, 6 ,7]
+// const newarr=arr.map((arr)=>2*arr)
+// console.log(newarr)    OUTPUT=> Array(7) [ 2, 4, 6, 8, 10, 12, 14 ]
 
-// // let arr=[1,2,3,4,5]
-// // const newarr = arr.map((ele)=>ele)
-// // console.log(newarr)
-// // arr.forEach((ele)=>console.log(ele))
 
-// const btn2=document.querySelector('button')
-// // btn2.classList.add('bt1')
-// // btn2.classList.remove('bt1')
-// function printDoc(){
-//     window.print()
+// Doesn't return a new array
+// let arr=[1,2,3,4,5,6,7]
+// arr.forEach((ele)=>console.log(arr+=2))
+
+// Difference in .textContent and .innerText
+
+// .textContent applies changes to the hidden elements also (display:none or visibility:hidden).
+// .innerText doesn't apply changes to hidden elements.
+
+// const container=document.querySelector(".container")
+// const button=document.querySelector("button")
+// container.addEventListener("click",()=>{
+//     console.log("Container clicked")
+// })
+
+// button.addEventListener("click",()=>{
+//     console.log("Button clicked")
+// })
+
+// console.log(a) ERROR: ReferenceError: Cannot access 'a' before initialization
+// console.log(b) Undefined
+
+// let a = 239
+// var b = 2595
+
+// function hello(){
+//     console.log("Hello World")
 // }
-// btn2.addEventListener('click', printDoc)
+
+// hello()
 
 
-// function message(event){
-//     console.log(event.key)
+
+// function first() {
+    // second()
 // }
-// btn2.addEventListener( 'keydown' ,message )
+// function second() {
+    // third()
+// }
+// function third() {
+    // console.trace()
+// }
+// first()
 
-const bt=document.querySelector('button')
+let val=40
 
-const submissionalert = ()=>{
-    alert('Details Submitted Successfully!')
+function calc(){
+    console.log(val)
+    let val=100
 }
 
-const toogleTheme = ()=>{
-    document.body.classList.toggle('dark-theme')
-}
-
-bt.addEventListener('click', submissionalert)
-
-const container = document.querySelector('container')
-const outerdiv = document.querySelector('outer div')
-const buton = document.querySelector('buton1')
-
-container.addEventListener('click' , ()=>{console.log('div')})
-outerdiv.addEventListener('click' , ()=>{console.log('outer div')})
-buton.addEventListener('click' , ()=>{console.log('button')})
- 
+calc()
