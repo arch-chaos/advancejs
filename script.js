@@ -68,11 +68,45 @@
 // }
 // first()
 
-let val=40
+// let val=40
 
-function calc(){
-    console.log(val)
-    let val=100
-}
+// function calc(){
+//     console.log(val)
+//     let val=100
+// }
 
-calc()
+// calc()
+// setTimeout(() => {
+//     console.log("Hello after 5 seconds")
+// }, 5*1000);
+
+// setInterval(() => {
+//     console.log("Hello after every 2 seconds")
+// }, 2*1000);
+
+// const timerID = setInterval(() => {"set interval"}, 1000);
+
+// const timerID2 = setTimeout(() => {
+//     clearInterval(timerID);
+// }, 10000);
+
+const name = document.querySelector("#name")
+const btn = document.querySelector("#btn")
+const list = document.querySelector(".list")
+
+btn.addEventListener("click", () => {
+    if (name.value == "") {
+        alert("Please enter a valid name")
+        return;
+    }
+    const li = document.createElement("li")
+    const dlt = document.createElement("button")
+    li.innerText = name.value;
+    dlt.innerText = "Delete"
+    dlt.addEventListener("click", () => {
+        list.removeChild(li)
+    })
+    li.appendChild(dlt)
+    list.appendChild(li)
+    name.value = ""
+    })
