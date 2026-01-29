@@ -110,3 +110,15 @@ btn.addEventListener("click", () => {
     list.appendChild(li)
     name.value = ""
     })
+
+function print(num){
+    setTimeout(() => {
+        console.log("Inside print")
+        num()
+} ,2000)}
+
+function sample(){
+    console.log("Inside callback")
+}
+
+print(sample)
