@@ -121,4 +121,4 @@ function sample(){
     console.log("Inside callback")
 }
 
-print(sample)
+// print(sample)
