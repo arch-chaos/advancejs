@@ -121,4 +121,19 @@ function sample(){
     console.log("Inside callback")
 }
 
-// print(sample)
+print(sample)
+console.log("Starting Homework")
+
+setTimeout(() => {
+    console.log("Homework done");
+    console.log("Starting dinner...");
+
+    setTimeout(() => {
+        console.log("Dinner done");
+        console.log("Getting ready to go out...");
+
+        setTimeout(() => {
+            console.log("Going to playground");
+        }, 1000);
+    }, 2500);
+}, 2000);
