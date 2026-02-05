@@ -90,50 +90,76 @@
 //     clearInterval(timerID);
 // }, 10000);
 
-const name = document.querySelector("#name")
-const btn = document.querySelector("#btn")
-const list = document.querySelector(".list")
+// const name = document.querySelector("#name")
+// const btn = document.querySelector("#btn")
+// const list = document.querySelector(".list")
 
-btn.addEventListener("click", () => {
-    if (name.value == "") {
-        alert("Please enter a valid name")
-        return;
-    }
-    const li = document.createElement("li")
-    const dlt = document.createElement("button")
-    li.innerText = name.value;
-    dlt.innerText = "Delete"
-    dlt.addEventListener("click", () => {
-        list.removeChild(li)
-    })
-    li.appendChild(dlt)
-    list.appendChild(li)
-    name.value = ""
-    })
+// btn.addEventListener("click", () => {
+//     if (name.value == "") {
+//         alert("Please enter a valid name")
+//         return;
+//     }
+//     const li = document.createElement("li")
+//     const dlt = document.createElement("button")
+//     li.innerText = name.value;
+//     dlt.innerText = "Delete"
+//     dlt.addEventListener("click", () => {
+//         list.removeChild(li)
+//     })
+//     li.appendChild(dlt)
+//     list.appendChild(li)
+//     name.value = ""
+//     })
 
-function print(num){
+// function print(num){
+//     setTimeout(() => {
+//         console.log("Inside print")
+//         num()
+// } ,2000)}
+
+// function sample(){
+//     console.log("Inside callback")
+// }
+
+// print(sample)
+// console.log("Starting Homework")
+
+// setTimeout(() => {
+//     console.log("Homework done");
+//     console.log("Starting dinner...");
+
+//     setTimeout(() => {
+//         console.log("Dinner done");
+//         console.log("Getting ready to go out...");
+
+//         setTimeout(() => {
+//             console.log("Going to playground");
+//         }, 1000);
+//     }, 2500);
+// }, 2000);
+
+
+// function finishHomework(callback){
+//     console.log("Starting homework...");
+//     setTimeout(() => {
+//         console.log("Homework finished");
+//         callback()
+//     }, 2000);
+// }
+
+const p = new Promise((resolve, reject) => {
+    let done = true;
     setTimeout(() => {
-        console.log("Inside print")
-        num()
-} ,2000)}
-
-function sample(){
-    console.log("Inside callback")
-}
-
-print(sample)
-console.log("Starting Homework")
-
-setTimeout(() => {
-    console.log("Homework done");
-    console.log("Starting dinner...");
-
-    setTimeout(() => {
-        console.log("Dinner done");
-        console.log("Getting ready to go out...");
-
-        setTimeout(() => {
-            console.log("Going to playground");
-        }, 1000);
-    }, 2500);
-}, 2000);
+        if (done) {
+            resolve("Homework is done");
+        } else {
+            reject("Homework is not done");
+        }
+}, 2000);});
+p.then((data) => {
+    console.log(data);
+}).catch((er) =>{
+    console.log(er);
+}).finally(() => {
+    console.log("Finally back")
+})
