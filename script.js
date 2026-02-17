@@ -223,39 +223,55 @@
 //     console.log("Go to sleep")
 // })
 
-function orderFood(){
-    return new Promise((res, rej) => {
-        setTimeout(() => {
-            console.log("Food Ordered");
-            res("food is ordered")
-        }, 2000)
-    })
-}
+// function orderFood(){
+//     return new Promise((res, rej) => {
+//         setTimeout(() => {
+//             console.log("Food Ordered");
+//             res("food is ordered")
+//         }, 2000)
+//     })
+// }
 
-function prepareFood(){
-    return new Promise((res, rej) => {
-        setTimeout(() => {
-            console.log("Food Prepared");
-            res()
-        }, 3000)
-    })
-}
+// function prepareFood(){
+//     return new Promise((res, rej) => {
+//         setTimeout(() => {
+//             console.log("Food Prepared");
+//             res()
+//         }, 3000)
+//     })
+// }
 
-function deliverFood(){
-    return new Promise((res, rej) => {
-        setTimeout(() => {
-            console.log("Food Delivered");
-            res()
-        }, 4000)
-    })
-}
+// function deliverFood(){
+//     return new Promise((res, rej) => {
+//         setTimeout(() => {
+//             console.log("Food Delivered");
+//             res()
+//         }, 4000)
+//     })
+// }
 
-async function foodOrder(){
-    const data = await orderFood()
-    console.log(data)
-    await prepareFood()
-    await deliverFood()
-}
+// async function foodOrder(){
+//     const data = await orderFood()
+//     console.log(data)
+//     await prepareFood()
+//     await deliverFood()
+// }
 
-foodOrder()
-    
+// foodOrder()
+// console.log("First line")
+// try{
+//     let a = 10
+//     console.log(a)
+// } catch (error) {
+//     console.log("Error caught: " + error)
+// }
+// console.log("Last line")
+
+try{
+    let age = 16
+    if (age < 18) {
+        throw new Error("Age must be at least 18")
+    }   
+}catch(e){
+    console.error("Error caught: " + e)
+}
