@@ -267,11 +267,43 @@
 // }
 // console.log("Last line")
 
-try{
-    let age = 16
-    if (age < 18) {
-        throw new Error("Age must be at least 18")
-    }   
-}catch(e){
-    console.error("Error caught: " + e)
+// try{
+//     let age = 16
+//     if (age < 18) {
+//         throw new Error("Age must be at least 18")
+//     }   
+// }catch(e){
+//     console.error("Error caught: " + e)
+// } 
+function* generator(){
+    yield 1
+    yield 2
+    yield 3
+}   
+const gen = generator()
+console.log(gen.next())
+console.log(gen.next())
+console.log(gen.next())
+console.log(gen.next())
+
+function* generator2(){
+    for(let i=1; i<=5; i++){
+        yield i
+    }
 }
+const gen2 = generator2()
+console.log(gen2.next())
+console.log(gen2.next())
+console.log(gen2.next())
+console.log(gen2.next())
+console.log(gen2.next())
+console.log(gen2.next()) 
+
+function add(a){
+    return function(b){
+        return function(c){
+            return a+b+c
+        }   
+    }
+}
+console.log(add(2)(3)(4))
